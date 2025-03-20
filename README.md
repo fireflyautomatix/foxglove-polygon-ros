@@ -1,39 +1,9 @@
 # polygon-ros
 
-[Foxglove](https://foxglove.dev) allows developers to create [extensions](https://docs.foxglove.dev/docs/visualization/extensions/introduction), or custom code that is loaded and executed inside the Foxglove application. This can be used to add custom panels. Extensions are authored in TypeScript using the `@foxglove/extension` SDK.
+Visualize complex polygons with messages from https://github.com/MetroRobots/polygon_ros.
 
-## Develop
+Currently all polygons are drawn as triangle lists only with no outlines, because you can't control the outline width in Foxglove Studio, which could be problematic since relevant widths vary greatly by scale.
 
-Extension development uses the `npm` package manager to install development dependencies and run build scripts.
+Colors passed to `Polygon2DCollection` and `ComplexPolygon2DCollection` are respected.
 
-To install extension dependencies, run `npm` from the root of the extension package.
-
-```sh
-npm install
-```
-
-To build and install the extension into your local Foxglove desktop app, run:
-
-```sh
-npm run local-install
-```
-
-Open the Foxglove desktop (or `ctrl-R` to refresh if it is already open). Your extension is installed and available within the app.
-
-## Package
-
-Extensions are packaged into `.foxe` files. These files contain the metadata (package.json) and the build code for the extension.
-
-Before packaging, make sure to set `name`, `publisher`, `version`, and `description` fields in _package.json_. When ready to distribute the extension, run:
-
-```sh
-npm run package
-```
-
-This command will package the extension into a `.foxe` file in the local directory.
-
-## Publish
-
-You can publish the extension to the public registry or privately for your organization.
-
-See documentation here: https://docs.foxglove.dev/docs/visualization/extensions/publish/#packaging-your-extension
+Note that you can still change the color of all entities from the 3D panel options.
