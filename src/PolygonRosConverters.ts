@@ -30,7 +30,7 @@ function vertices_to_points(vertices: number[]): Point3[] {
 
 type PolygonArray = number[][][];
 
-const DEFAULT_COLOR: Color = { r: 1, g: 0, b: 0, a: 0.5 };
+const DEFAULT_COLOR: Color = { r: 0.647, g: 0.737, b: 1.0, a: 0.8 };
 
 function polygon_array_to_triangle_list(
   polygon: PolygonArray,
